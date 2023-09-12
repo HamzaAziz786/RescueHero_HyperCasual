@@ -874,7 +874,7 @@
             if (Water2DEmissionType == EmissionType.FillerCollider)
             { Debug.LogError("You're trying spawn particles in a Filler type. You should create a water spawner instead"); yield break; }
 
-            Physics2D.autoSimulation = true;
+           // Physics2D.autoSimulation = true;
 
             IsSpawning = true;
 
