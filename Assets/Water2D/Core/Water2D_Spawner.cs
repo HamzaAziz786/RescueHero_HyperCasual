@@ -629,14 +629,16 @@
             SpawnAllParticles(gameObject.transform.position, initSpeed, DefaultCount);
         }
 
-		public void Spawn(int count, Vector3 pos){
+        [System.Obsolete]
+        public void Spawn(int count, Vector3 pos){
 		
 			StartCoroutine (loop(pos, initSpeed, count));
 		}
 
-		public void Spawn(int count, Vector3 pos, Vector2 InitVelocity, float delay = 0f){
-			
-			StartCoroutine (loop(pos, InitVelocity, count, delay));
+        [System.Obsolete]
+        public void Spawn(int count, Vector3 pos, Vector2 InitVelocity, float delay = 0f){
+
+            StartCoroutine(loop(pos, InitVelocity, count, delay));
 		}
 
 		
@@ -862,6 +864,8 @@
         }
 
         bool _canInvokeAttheEnd = true;
+
+        [System.Obsolete]
         IEnumerator loop(Vector3 _pos, Vector2 _initSpeed, int count = -1, float delay = 0f, bool waitBetweenDropSpawn = true){
 
             if (IsSpawning)
